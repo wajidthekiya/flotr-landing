@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Autorich";
+  src: url("/src/assets/fonts/AutorichSansLite.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Autorich";
+  src: url("/src/assets/fonts/AutorichSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-primary: #977BF2;
+  --color-accent: #D6F458;
+  --color-deep: #3F3A5A;
+  --color-lav: #E9E6F3;
+  --color-cloud: #F4F4F6;
+}
+
+:root {
+  --font-heading: "Autorich", sans-serif;
+  --font-body: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --color-primary: #977BF2;
+  --color-accent: #D6F458;
+  --color-deep: #3F3A5A;
+  --color-lav: #E9E6F3;
+  --color-cloud: #F4F4F6;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cloud);
+  color: var(--color-deep);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.font-heading { font-family: var(--font-heading); }
+.font-body { font-family: var(--font-body); }
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--color-accent)] text-[var(--color-deep)] font-medium px-6 py-3 rounded-full transition-all hover:scale-105 hover:shadow-lg inline-flex items-center justify-center;
+  }
+  .btn-ghost {
+    @apply border-2 border-white text-white font-medium px-6 py-3 rounded-full transition-all hover:bg-white hover:text-[var(--color-primary)] inline-flex items-center justify-center;
+  }
+}
+
+
+@font-face {
+  font-family: "Autorich";
+  src: url("src/assets/fonts/autorich-sans-lite 2.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Autorich";
+  src: url("src/assets/fonts/AutorichSans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-heading: "Autorich", sans-serif;
+  --font-body: "Poppins", sans-serif;
+}
