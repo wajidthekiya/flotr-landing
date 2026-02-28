@@ -112,10 +112,15 @@ export default function Agencies() {
           viewport={{ once: true }}
           className="mt-40 text-center"
         >
-          <button className="bg-[var(--color-primary)] text-white px-12 py-6 rounded-full font-bold text-2xl hover:bg-[var(--color-accent)] hover:text-black transition-all duration-500 shadow-[0_0_30px_rgba(151,123,242,0.5)] hover:shadow-[0_0_50px_rgba(214,244,88,0.6)] hover:scale-105 inline-flex items-center gap-4 group">
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfzFeMtI1dLMdNi3IC4xiLqDabZB_4thf0V85DL8tL-Kk6Qaw/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[var(--color-primary)] text-white px-12 py-6 rounded-full font-bold text-2xl hover:bg-[var(--color-accent)] hover:text-black transition-all duration-500 shadow-[0_0_30px_rgba(151,123,242,0.5)] hover:shadow-[0_0_50px_rgba(214,244,88,0.6)] hover:scale-105 inline-flex items-center gap-4 group"
+          >
              Apply as Verified Agency
              <span className="text-3xl group-hover:translate-x-2 transition-transform">👉</span>
-          </button>
+          </a>
         </motion.div>
       </div>
     </div>
