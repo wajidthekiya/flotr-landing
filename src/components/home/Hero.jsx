@@ -19,7 +19,7 @@ export default function Hero() {
             playsInline
             preload="auto"
             className="absolute inset-0 w-full h-full object-cover scale-105 will-change-transform"
-            src="/latest-hero-bg.mov"
+            src="/optimized-hero-bg.mp4"
           />
           {/* Vibrant Light Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-[var(--color-bg)]/80"></div>
