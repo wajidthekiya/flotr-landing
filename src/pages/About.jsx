@@ -97,9 +97,16 @@ export default function About() {
             </div>
             <h3 className="font-heading text-4xl md:text-5xl text-[var(--color-text)] mb-2 relative z-10">Mohammad Wajid Thekiya</h3>
             <p className="text-[var(--color-primary)] font-bold mb-6 uppercase tracking-widest text-sm relative z-10">Founder</p>
-            <p className="font-body text-xl md:text-2xl text-[var(--color-text)]/80 mb-10 max-w-2xl mx-auto leading-relaxed relative z-10">
-              "We built Flotr because the group chat is where trips go to die. We're on a mission to make spontaneous travel accessible, social, and visual for everyday explorers."
-            </p>
+            
+            <div className="font-body text-base md:text-lg text-[var(--color-text)]/80 mb-10 max-w-3xl mx-auto leading-relaxed relative z-10 space-y-6">
+              <p className="text-left">
+                Mohammad Wajid Thekiya is a tech entrepreneur and the visionary behind Flotr. Passionate about community-driven digital platforms and solving real-life consumer friction, he built Flotr to completely revolutionize how Gen-Z and modern professionals experience travel—shifting the paradigm from boring text brochures to highly engaging, visual, and social trip bookings.
+              </p>
+              <p className="italic text-xl md:text-2xl font-medium text-[var(--color-text)] relative p-6 border-l-4 border-[var(--color-accent)] bg-black/10 rounded-r-2xl text-left">
+                "We built Flotr because the group chat is where trips go to die. We're on a mission to make spontaneous travel accessible, social, and transparent for everyday explorers."
+              </p>
+            </div>
+
             <a 
               href="https://www.linkedin.com/in/mohammad-wajid-thekiya/" 
               target="_blank" 
