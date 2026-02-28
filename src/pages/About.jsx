@@ -1,0 +1,119 @@
+import { motion } from 'framer-motion';
+
+export default function About() {
+  return (
+    <div className="pt-40 pb-32 px-6 md:px-20 bg-[var(--color-deep)] min-h-screen flex flex-col items-center relative overflow-hidden">
+      {/* Background Glows */}
+      <div className="absolute top-1/4 left-[-10%] w-[40vw] h-[40vw] bg-[var(--color-accent)] rounded-full mix-blend-multiply filter blur-[150px] opacity-40 pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-[-10%] w-[40vw] h-[40vw] bg-[var(--color-primary)] rounded-full mix-blend-multiply filter blur-[150px] opacity-50 pointer-events-none"></div>
+      
+      <div className="max-w-6xl w-full relative z-10 mx-auto">
+        <motion.div className="max-w-4xl mx-auto text-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h1 
+            className="font-heading text-5xl md:text-8xl lg:text-9xl font-bold text-[var(--color-text)] mb-16 tracking-wide leading-[0.9]"
+          >
+            TRAVEL THAT <br />
+            <span className="text-gradient">ACTUALLY HAPPENS.</span>
+          </motion.h1>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-8 font-body text-xl md:text-2xl text-[var(--color-text)]/80 leading-relaxed mb-24"
+          >
+            <p className="text-2xl md:text-4xl font-medium text-[var(--color-text)]">
+              Flotr exists because the group chat is where trips go to die.
+            </p>
+            <p>
+              We got tired of waiting for friends to agree on dates, budgets, and itineraries. We got tired of expensive travel packages that we couldn't afford. So we built Flotr: India's first video-first trip marketplace designed for Gen-Z and working professionals.
+            </p>
+          </motion.div>
+        </motion.div>
+          
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="pt-10"
+        >
+          <h2 className="font-heading text-4xl md:text-6xl text-[var(--color-text)] mb-16 text-center">Why We Built This</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-10 rounded-[3rem] bg-gradient-to-br from-[var(--color-primary)]/10 to-[var(--color-surface)] backdrop-blur-md border border-[var(--color-primary)]/30 hover:-translate-y-2 transition-transform duration-500 shadow-xl shadow-[var(--color-primary)]/5 h-full flex flex-col">
+              <div className="w-16 h-16 bg-[var(--color-primary)]/20 rounded-full flex items-center justify-center mb-8 border border-[var(--color-primary)]/30 text-[var(--color-primary)] text-3xl">
+                🚀
+              </div>
+              <h3 className="font-heading text-3xl md:text-4xl text-[var(--color-text)] mb-4">Stop Waiting for Friends</h3>
+              <p className="font-body text-lg text-[var(--color-text)]/70 flex-grow">
+                Our "See who's joining" feature lets you see exactly who is already booked on a trip. Solo travel doesn't mean you have to be alone. Join a group of like-minded people and make new friends.
+              </p>
+            </div>
+            
+            <div className="p-10 rounded-[3rem] bg-gradient-to-br from-[var(--color-accent)]/20 to-[var(--color-surface)] backdrop-blur-md border border-[var(--color-accent)]/50 hover:-translate-y-2 transition-transform duration-500 shadow-xl shadow-[var(--color-accent)]/10 h-full flex flex-col">
+              <div className="w-16 h-16 bg-[var(--color-accent)]/20 rounded-full flex items-center justify-center mb-8 border border-[var(--color-accent)]/50 text-3xl">
+                💸
+              </div>
+              <h3 className="font-heading text-3xl md:text-4xl text-[var(--color-text)] mb-4">Travel Shouldn't Bankrupt You</h3>
+              <p className="font-body text-lg text-[var(--color-text)]/70 flex-grow">
+                We focus on accessible weekend getaways. With trips starting from just ₹1500, you don't need to save up for months to escape the city. Just scroll, book, and pack.
+              </p>
+            </div>
+
+            <div className="p-10 rounded-[3rem] bg-gradient-to-br from-[#6338CB]/10 to-[var(--color-surface)] backdrop-blur-md border border-[#6338CB]/30 hover:-translate-y-2 transition-transform duration-500 shadow-xl shadow-[#6338CB]/5 h-full flex flex-col">
+              <div className="w-16 h-16 bg-[#6338CB]/20 rounded-full flex items-center justify-center mb-8 border border-[#6338CB]/30 text-3xl">
+                🎥
+              </div>
+              <h3 className="font-heading text-3xl md:text-4xl text-[var(--color-text)] mb-4">See It Before You Buy It</h3>
+              <p className="font-body text-lg text-[var(--color-text)]/70 flex-grow">
+                No more reading boring text itineraries and hoping the hotel looks like the pictures. Verified travel agencies post short-form videos of their trips, so you know exactly what the vibe is before you pay.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Founder Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="pt-40"
+        >
+          <h2 className="font-heading text-4xl md:text-6xl text-[var(--color-text)] mb-12 text-center w-full">Meet the Founder</h2>
+          
+          <div className="w-full p-10 md:p-14 rounded-[3rem] bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-surface)] backdrop-blur-md border border-[var(--color-primary)]/50 hover:-translate-y-2 transition-transform duration-500 shadow-xl shadow-[var(--color-primary)]/10 text-center relative group">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[var(--color-accent)] rounded-full mix-blend-multiply filter blur-[80px] opacity-40 pointer-events-none group-hover:opacity-70 transition-opacity duration-500"></div>
+            
+            <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-[var(--color-accent)] shadow-[0_0_30px_rgba(214,244,88,0.3)] relative z-10">
+              <img 
+                src="https://media.licdn.com/dms/image/v2/D5603AQF4Oaw-wGfW_A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1684307527633?e=1746057600&v=beta&t=o1f7B9c-0GZ5B_2H_b78cIeV7a_l1XQ1_4vW0123456" 
+                alt="Mohammad Wajid Thekiya" 
+                className="w-full h-full object-cover" 
+              />
+            </div>
+            <h3 className="font-heading text-4xl md:text-5xl text-[var(--color-text)] mb-2 relative z-10">Mohammad Wajid Thekiya</h3>
+            <p className="text-[var(--color-primary)] font-bold mb-6 uppercase tracking-widest text-sm relative z-10">Founder</p>
+            <p className="font-body text-xl md:text-2xl text-[var(--color-text)]/80 mb-10 max-w-2xl mx-auto leading-relaxed relative z-10">
+              "We built Flotr because the group chat is where trips go to die. We're on a mission to make spontaneous travel accessible, social, and visual for everyday explorers."
+            </p>
+            <a 
+              href="https://www.linkedin.com/in/mohammad-wajid-thekiya/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-[#0077b5] text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-lg hover:scale-105 hover:bg-[#0088cc] transition-all duration-300 shadow-[0_0_20px_rgba(0,119,181,0.4)] relative z-10"
+            >
+              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              Connect on LinkedIn
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}

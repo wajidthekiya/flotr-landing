@@ -17,35 +17,27 @@
 }
 
 @theme {
-  --color-primary: #8553F4;
-  --color-accent: #ADC918;
-  --color-deep: #F6F4FE; /* Soft colorful lavender white */
-  --color-lav: #ECE9F5;
-  --color-cloud: #FFFFFF;
-  --color-text: #090514;
-  --color-surface: rgba(255, 255, 255, 0.75);
-  --color-border: rgba(133, 83, 244, 0.15); /* Purple tint to borders */
-  --color-overlay: rgba(255, 255, 255, 0.85);
+  --color-primary: #977BF2;
+  --color-accent: #D6F458;
+  --color-deep: #090514; /* Deep energetic violet-black */
+  --color-lav: #1A103C;
+  --color-cloud: #120A24;
 }
 
 :root {
   --font-heading: "Autorich", sans-serif;
   --font-body: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  --color-primary: #8553F4;
-  --color-accent: #ADC918;
-  --color-deep: #F6F4FE;
-  --color-lav: #ECE9F5;
-  --color-cloud: #FFFFFF;
-  --color-text: #090514;
-  --color-surface: rgba(255, 255, 255, 0.75);
-  --color-border: rgba(133, 83, 244, 0.15);
-  --color-overlay: rgba(255, 255, 255, 0.85);
+  --color-primary: #977BF2;
+  --color-accent: #D6F458;
+  --color-deep: #090514;
+  --color-lav: #1A103C;
+  --color-cloud: #120A24;
 }
 
 body {
   font-family: var(--font-body);
   background-color: var(--color-deep);
-  color: var(--color-text);
+  color: #FFFFFF;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -60,11 +52,11 @@ body {
 }
 
 .glow-primary {
-  box-shadow: 0 0 30px 5px rgba(151, 123, 242, 0.4);
+  box-shadow: 0 0 40px 10px rgba(151, 123, 242, 0.3);
 }
 
 .glow-accent {
-  box-shadow: 0 0 30px 5px rgba(214, 244, 88, 0.4);
+  box-shadow: 0 0 40px 10px rgba(214, 244, 88, 0.3);
 }
 
 .bg-noise {
@@ -88,7 +80,7 @@ body {
     @apply bg-[var(--color-accent)] text-[var(--color-deep)] font-medium px-6 py-3 rounded-full transition-all hover:scale-105 hover:shadow-lg inline-flex items-center justify-center;
   }
   .btn-ghost {
-    @apply border-2 border-[var(--color-text)] text-[var(--color-text)] font-medium px-6 py-3 rounded-full transition-all hover:bg-[var(--color-text)] hover:text-white inline-flex items-center justify-center;
+    @apply border-2 border-white text-white font-medium px-6 py-3 rounded-full transition-all hover:bg-white hover:text-[var(--color-primary)] inline-flex items-center justify-center;
   }
 }
 

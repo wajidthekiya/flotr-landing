@@ -1,58 +1,34 @@
-import { FaInstagram, FaTwitter, FaTiktok, FaLinkedin } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-[var(--color-deep)] text-white py-16">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
-        {/* Brand */}
-        <div className="col-span-1 md:col-span-2 space-y-6">
-          <a href="#" className="font-heading text-4xl tracking-wider text-white">
-            FLOTR
-          </a>
-          <p className="font-body text-white/70 max-w-sm leading-relaxed">
-            Travel that flows with you. Discover, connect, and book your next adventure seamlessly.
-          </p>
-          <div className="flex space-x-6 pt-4">
-            <a href="#" className="text-white/70 hover:text-[var(--color-accent)] transition-colors">
-              <FaInstagram className="w-6 h-6" />
-            </a>
-            <a href="#" className="text-white/70 hover:text-[var(--color-accent)] transition-colors">
-              <FaTiktok className="w-6 h-6" />
-            </a>
-            <a href="#" className="text-white/70 hover:text-[var(--color-accent)] transition-colors">
-              <FaTwitter className="w-6 h-6" />
-            </a>
-            <a href="#" className="text-white/70 hover:text-[var(--color-accent)] transition-colors">
-              <FaLinkedin className="w-6 h-6" />
-            </a>
-          </div>
+    <footer className="bg-[var(--color-deep)] text-[var(--color-text)] py-8 md:py-12 border-t border-[var(--color-border)] relative overflow-hidden">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[100vw] h-[20vw] bg-[var(--color-primary)] rounded-full mix-blend-multiply filter blur-[200px] opacity-40 pointer-events-none"></div>
+      
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 relative z-10">
+        <div className="flex flex-col items-center md:items-start gap-3 md:gap-4">
+          <Link to="/" className="flex items-center group">
+            <img 
+              src="/Logo/Logo_3.svg" 
+              alt="FLOTR Logo" 
+              className="w-24 md:w-40 h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </Link>
+          <p className="font-body text-[var(--color-text)]/60 font-medium md:mt-2 text-xs md:text-sm text-center md:text-left">Don't just travel. Live it.</p>
         </div>
 
-        {/* Links */}
-        <div className="space-y-6">
-          <h4 className="font-heading text-xl text-white">Company</h4>
-          <ul className="space-y-4 font-body text-white/70">
-            <li><a href="#" className="hover:text-[var(--color-accent)] transition-colors">About Us</a></li>
-            <li><a href="#" className="hover:text-[var(--color-accent)] transition-colors">Careers</a></li>
-            <li><a href="#" className="hover:text-[var(--color-accent)] transition-colors">Press</a></li>
-            <li><a href="#" className="hover:text-[var(--color-accent)] transition-colors">Contact</a></li>
-          </ul>
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8 font-body font-medium text-xs md:text-sm">
+          <Link to="/about" className="hover:text-[var(--color-primary)] transition-colors">About</Link>
+          <Link to="/agencies" className="hover:text-[var(--color-primary)] transition-colors">Agencies</Link>
+          <Link to="/investors" className="hover:text-[var(--color-primary)] transition-colors">Investors</Link>
+          <Link to="/privacy" className="hover:text-[var(--color-primary)] transition-colors">Privacy</Link>
         </div>
 
-        <div className="space-y-6">
-          <h4 className="font-heading text-xl text-white">Legal</h4>
-          <ul className="space-y-4 font-body text-white/70">
-            <li><a href="#" className="hover:text-[var(--color-accent)] transition-colors">Terms of Service</a></li>
-            <li><a href="#" className="hover:text-[var(--color-accent)] transition-colors">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-[var(--color-accent)] transition-colors">Cookie Policy</a></li>
-          </ul>
+        <div className="flex gap-4 md:gap-6 text-xl md:text-2xl text-[var(--color-text)]/80">
+          <a href="https://www.instagram.com/flotr_india?igsh=MmloajZ4Y2p6cGE4&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-primary)] hover:scale-110 transition-all"><FaInstagram /></a>
+          <a href="https://www.linkedin.com/company/flotr/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-primary)] hover:scale-110 transition-all"><FaLinkedin /></a>
         </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 text-center font-body text-white/50 text-sm">
-        &copy; {currentYear} Flotr Inc. All rights reserved.
       </div>
     </footer>
   );

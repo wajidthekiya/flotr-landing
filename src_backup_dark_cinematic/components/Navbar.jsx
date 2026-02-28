@@ -20,28 +20,23 @@ export default function Navbar() {
 
   // Determine text and background colors based on route and scroll position
   const isDarkText = false; // Always light text on dark theme
-  const navBg = isScrolled ? 'bg-[var(--color-deep)]/80 backdrop-blur-xl shadow-lg border-b border-[var(--color-border)]' : 'bg-transparent';
-  const textColor = 'text-[var(--color-text)]';
-  const logoColor = 'text-[var(--color-text)]';
+  const navBg = isScrolled ? 'bg-[var(--color-deep)]/90 backdrop-blur-md shadow-sm border-b border-white/10' : 'bg-transparent';
+  const textColor = 'text-white';
+  const logoColor = 'text-[var(--color-primary)]';
 
   const navLinks = [
     { name: 'About', href: '/about' },
     { name: 'For Agencies', href: '/agencies' },
-    { name: 'Investors', href: '/investors' },
   ];
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg} py-4 md:py-6`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBg} py-6`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center group">
-          <img 
-            src="/Logo/Logo_3.svg" 
-            alt="FLOTR Logo" 
-            className="w-36 md:w-52 h-auto object-contain transition-transform duration-300 group-hover:scale-105"
-          />
+        <Link to="/" className={`font-heading text-3xl tracking-widest transition-colors duration-500 ${logoColor}`}>
+          FLOTR
         </Link>
 
         {/* Desktop Nav */}
@@ -55,14 +50,9 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <a
-            href="https://play.google.com/store/apps/details?id=ai.flotr.flotr&pcampaignid=web_share"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[var(--color-primary)] text-[var(--color-text)] font-bold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(151,123,242,0.5)] hover:bg-[var(--color-accent)] hover:text-[#090514] block"
-          >
+          <button className="bg-[var(--color-accent)] text-[var(--color-deep)] font-medium px-8 py-3 rounded-full transition-transform hover:scale-105">
             Get the App
-          </a>
+          </button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -82,27 +72,24 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-[var(--color-deep)] shadow-xl md:hidden flex flex-col items-center py-8 space-y-8 border-t border-[var(--color-border)]"
+            className="absolute top-full left-0 right-0 bg-[var(--color-deep)] shadow-xl md:hidden flex flex-col items-center py-8 space-y-8 border-t border-white/10"
           >
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
-                className="text-[var(--color-text)] font-body text-xl font-medium hover:text-[var(--color-primary)] transition-colors"
+                className="text-white font-body text-xl font-medium hover:text-[var(--color-primary)] transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
-            <a 
-              href="https://play.google.com/store/apps/details?id=ai.flotr.flotr&pcampaignid=web_share"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[var(--color-accent)] text-[#090514] font-medium px-10 py-4 rounded-full text-lg block text-center"
+            <button 
+              className="bg-[var(--color-accent)] text-[var(--color-deep)] font-medium px-10 py-4 rounded-full text-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Get the App
-            </a>
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
